@@ -1,29 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-background text-textPrimary font-body antialiased selection:bg-primary/30 selection:text-white;
+  :root {
+    --bg: #F8F9FA;
+    --surface: #FFFFFF;
+    --text-primary: #0D0D0F;
+    --text-muted: #6B7280;
+    --border: #E5E7EB;
+    --primary: #FF3366;
+    --secondary: #FFB300;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold;
+  .dark {
+    --bg: #0D0D0F;
+    --surface: #16161A;
+    --text-primary: #F5F5F7;
+    --text-muted: #8E8E9A;
+    --border: #2A2A35;
+    --primary: #FF3366;
+    --secondary: #FFB300;
   }
 }
 
-@layer components {
-  .btn-primary {
-    @apply px-4 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-  
-  .card {
-    @apply bg-surface border border-border rounded-xl overflow-hidden shadow-lg;
-  }
-  
-  .input-field {
-    @apply w-full px-4 py-2 bg-surface-elevated border border-border rounded-lg text-textPrimary placeholder:text-textMuted focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200;
-  }
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

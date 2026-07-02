@@ -45,11 +45,11 @@ export default function SeatMap() {
     }
     
     if (seat.status === 'BOOKED') {
-      return { backgroundColor: '#2A2A35', borderColor: '#2A2A35', opacity: 0.5, cursor: 'not-allowed' };
+      return { backgroundColor: 'var(--border)', borderColor: 'var(--border)', opacity: 0.5, cursor: 'not-allowed' };
     }
     
     if (seat.status === 'HELD') {
-      return { backgroundColor: '#3A3A45', borderColor: '#3A3A45', opacity: 0.7, cursor: 'not-allowed' };
+      return { backgroundColor: 'var(--text-muted)', borderColor: 'var(--text-muted)', opacity: 0.7, cursor: 'not-allowed' };
     }
     
     // Available
@@ -69,9 +69,9 @@ export default function SeatMap() {
       const rowLabel = String.fromCharCode(65 + r);
       for (let c = 1; c <= 10; c++) {
         let cat: SeatCategory = 'STANDARD';
-        let price = 75;
-        if (r < 2) { cat = 'PREMIUM'; price = 150; }
-        else if (r < 5) { cat = 'GOLD'; price = 100; }
+        let price = 190;
+        if (r < 2) { cat = 'PREMIUM'; price = 480; }
+        else if (r < 5) { cat = 'GOLD'; price = 320; }
         
         mockSeats.push({
           id: seatId++,
@@ -175,7 +175,7 @@ export default function SeatMap() {
       <div className="flex-1 overflow-auto bg-background p-8 relative flex flex-col items-center">
         
         {/* Stage */}
-        <div className="w-full max-w-2xl h-12 border-2 border-border border-t-0 rounded-b-[50%] mb-16 flex items-center justify-center bg-surface-elevated text-textMuted font-display tracking-[0.5em] shadow-[0_20px_50px_rgba(255,51,102,0.1)]">
+        <div className="w-full max-w-2xl h-12 border-2 border-border border-t-0 rounded-b-[50%] mb-16 flex items-center justify-center bg-surface text-textMuted font-display tracking-[0.5em] shadow-[0_20px_50px_rgba(255,51,102,0.1)]">
           STAGE
         </div>
 
@@ -216,10 +216,10 @@ export default function SeatMap() {
         <div className="mt-16 flex gap-6 p-4 rounded-2xl bg-surface border border-border">
           <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-[#FFB300]/30 border border-[#FFB300]"></div><span className="text-sm">Premium</span></div>
           <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-[#9B59B6]/30 border border-[#9B59B6]"></div><span className="text-sm">Gold</span></div>
-          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-[#5B8CFF]/30 border border-[#5B8CFF]"></div><span className="text-sm">Standard</span></div>
-          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-[#3A3A45] opacity-70"></div><span className="text-sm">Held</span></div>
-          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-[#2A2A35] opacity-50"></div><span className="text-sm">Booked</span></div>
-          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-white border-2 border-primary"></div><span className="text-sm">Selected</span></div>
+          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-[#5B8CFF]/30 border border-[#5B8CFF]"></div><span className="text-sm text-text-primary">Standard</span></div>
+          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-muted opacity-70"></div><span className="text-sm text-text-primary">Held</span></div>
+          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-border opacity-50"></div><span className="text-sm text-text-primary">Booked</span></div>
+          <div className="flex items-center gap-2"><div className="w-4 h-4 rounded-md bg-white border-2 border-primary"></div><span className="text-sm text-text-primary">Selected</span></div>
         </div>
 
       </div>
@@ -238,7 +238,7 @@ export default function SeatMap() {
                 <h4 className="text-textMuted text-sm mb-1">Selected Seats</h4>
                 <div className="flex gap-2">
                   {selectedSeatsData.map(s => (
-                    <span key={s.id} className="font-mono bg-surface-elevated px-2 py-1 rounded border border-border">
+                    <span key={s.id} className="font-mono bg-surface px-2 py-1 rounded border border-border text-text-primary">
                       {s.rowLabel}{s.colNumber}
                     </span>
                   ))}
@@ -247,7 +247,7 @@ export default function SeatMap() {
               <div className="flex items-center gap-8">
                 <div className="text-right">
                   <h4 className="text-textMuted text-sm mb-1">Total</h4>
-                  <span className="text-2xl font-bold">${totalPrice}</span>
+                  <span className="text-2xl font-bold text-text-primary">₹{totalPrice}</span>
                 </div>
                 <button 
                   onClick={() => navigate('/checkout')}

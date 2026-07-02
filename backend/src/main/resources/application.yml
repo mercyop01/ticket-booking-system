@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/ticket_db
+    url: jdbc:postgresql://localhost:5433/ticket_db
     username: ticket_user
     password: ticket_password
   jpa:
@@ -14,7 +14,7 @@ spring:
   data:
     redis:
       host: localhost
-      port: 6379
+      port: 6380
       password: ticket_redis_pass
   mail:
     host: localhost

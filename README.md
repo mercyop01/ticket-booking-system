@@ -1,5 +1,7 @@
 # Ticket Booking System
 
+**Author: Parth Gupta**
+
 A highly concurrent, real-time full-stack ticket booking system for movies and concerts. This application allows users to browse events, select seats on an interactive map with live updates, securely hold seats to prevent double-booking, and join waitlists for sold-out events.
 
 ## 🚀 Tech Stack

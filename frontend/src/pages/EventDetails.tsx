@@ -24,12 +24,12 @@ export default function EventDetails() {
             <span className="px-3 py-1 bg-primary/20 text-primary border border-primary/30 rounded-full text-xs font-medium tracking-wide mb-4 inline-block">
               CONCERT
             </span>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-4">The Weeknd - After Hours</h1>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-4">Diljit Dosanjh World Tour</h1>
             
             <div className="flex flex-wrap gap-6 text-textMuted mb-8">
-              <div className="flex items-center gap-2"><MapPin size={18} /> Wembley Stadium, London</div>
-              <div className="flex items-center gap-2"><Calendar size={18} /> Dec 05, 2023</div>
-              <div className="flex items-center gap-2"><Clock size={18} /> 20:00 (Duration: 2h 30m)</div>
+              <div className="flex items-center gap-2"><MapPin size={18} /> DY Patil Stadium, Mumbai</div>
+              <div className="flex items-center gap-2"><Calendar size={18} /> Dec 25, 2024</div>
+              <div className="flex items-center gap-2"><Clock size={18} /> 19:30 (Duration: 3h)</div>
             </div>
             
             <div className="prose prose-invert max-w-none mb-12">
@@ -51,21 +51,21 @@ export default function EventDetails() {
                   <div className="w-4 h-4 rounded-full bg-secondary"></div>
                   <span className="font-medium">Premium</span>
                 </div>
-                <span className="font-bold">$150</span>
+                <span className="font-bold">₹4500</span>
               </div>
               <div className="flex justify-between items-center p-3 rounded-lg border border-border bg-surface-elevated">
                 <div className="flex items-center gap-3">
                   <div className="w-4 h-4 rounded-full bg-purple-500"></div>
                   <span className="font-medium">Gold</span>
                 </div>
-                <span className="font-bold">$100</span>
+                <span className="font-bold">₹2500</span>
               </div>
               <div className="flex justify-between items-center p-3 rounded-lg border border-border bg-surface-elevated">
                 <div className="flex items-center gap-3">
                   <div className="w-4 h-4 rounded-full bg-blue-500"></div>
                   <span className="font-medium">Standard</span>
                 </div>
-                <span className="font-bold">$75</span>
+                <span className="font-bold">₹1200</span>
               </div>
             </div>
             

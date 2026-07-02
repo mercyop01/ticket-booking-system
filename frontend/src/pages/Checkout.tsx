@@ -56,16 +56,16 @@ export default function Checkout() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-textMuted mb-8 max-w-md"
+          className="text-text-primary mb-8 max-w-md"
         >
-          Your tickets for <strong>The Weeknd - After Hours</strong> have been booked. A confirmation email with your QR code has been sent.
+          Your tickets for <strong>Diljit Dosanjh World Tour</strong> have been booked. A confirmation email with your QR code has been sent.
         </motion.p>
         
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="card p-6 bg-surface-elevated max-w-sm w-full mb-8 border-dashed"
+          className="card p-6 bg-surface max-w-sm w-full mb-8 border-dashed"
         >
           <div className="flex justify-between items-center mb-6 border-b border-border border-dashed pb-6">
             <span className="text-textMuted">Booking Ref</span>
@@ -114,14 +114,14 @@ export default function Checkout() {
           
           <div className="card p-8">
             <h2 className="text-xl font-bold mb-6">Payment</h2>
-            <div className="p-4 bg-surface-elevated border border-border rounded-xl text-center text-textMuted">
+            <div className="p-4 bg-surface border border-border rounded-xl text-center text-textMuted">
               Payment integration (Stripe/Razorpay) goes here.
             </div>
             <button 
               onClick={handleConfirm}
               className="btn-primary w-full mt-6 py-4 text-lg font-bold"
             >
-              Pay $250.00
+              Pay ₹9500.00
             </button>
           </div>
         </div>
@@ -135,23 +135,23 @@ export default function Checkout() {
             </div>
             
             <div className="p-6">
-              <h3 className="font-bold mb-2">The Weeknd - After Hours</h3>
-              <p className="text-sm text-textMuted mb-6">Wembley Stadium, London • Dec 05, 2023</p>
+              <h3 className="font-bold mb-2">Diljit Dosanjh World Tour</h3>
+              <p className="text-sm text-textMuted mb-6">DY Patil Stadium, Mumbai • Dec 25, 2024</p>
               
               <div className="space-y-4 mb-6 border-b border-border pb-6">
                 <div className="flex justify-between text-sm">
                   <span>Premium Ticket (A1, A2)</span>
-                  <span>$300.00</span>
+                  <span>₹9000.00</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span>Booking Fee</span>
-                  <span>$15.00</span>
+                  <span>₹500.00</span>
                 </div>
               </div>
               
               <div className="flex justify-between text-lg font-bold mb-6">
                 <span>Total</span>
-                <span>$315.00</span>
+                <span>₹9500.00</span>
               </div>
             </div>
           </div>
