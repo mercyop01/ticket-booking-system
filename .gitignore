@@ -1,0 +1,31 @@
+# IDE
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+
+# Java/Spring
+backend/target/
+backend/build/
+backend/bin/
+backend/.settings/
+backend/.project
+backend/.classpath
+backend/*.log
+
+# Node/React
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# MacOS
+.DS_Store
