@@ -250,7 +250,7 @@ export default function SeatMap() {
                   <span className="text-2xl font-bold text-text-primary">₹{totalPrice}</span>
                 </div>
                 <button 
-                  onClick={() => navigate('/checkout')}
+                  onClick={() => navigate('/checkout', { state: { selectedSeatsData, totalPrice, eventId: id } })}
                   className="btn-primary py-3 px-8 flex items-center gap-2 text-lg"
                 >
                   <ShoppingCart size={20} />

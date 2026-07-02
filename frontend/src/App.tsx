@@ -6,6 +6,7 @@ import SeatMap from './pages/SeatMap';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
 import OrganiserDashboard from './pages/OrganiserDashboard';
+import Checkout from './pages/Checkout';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="organiser/dashboard" element={<OrganiserDashboard />} />
           <Route path="event/:id" element={<EventDetails />} />
           <Route path="event/:id/seats" element={<SeatMap />} />
+          <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </BrowserRouter>
